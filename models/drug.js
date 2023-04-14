@@ -1,5 +1,7 @@
-const findAll = function() {
+const knex = require('../config/database');
 
+const findAll = function() {
+    
 }
 
 const findOne = function() {

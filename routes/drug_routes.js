@@ -1,12 +1,11 @@
 const express = require('express')
+const { getDrugs, getDrug } = require('../controllers/drug_controller')
 const router = express.Router()
 
-router.get('/', (req, res) => {
-    res.send('drug route')
-})
 
-router.get('/:drugId', (req, res) => {
-    res.send('single drug route')
-})
+router.get('/', getDrugs)
+
+router.get('/:drugId', getDrug)
+
 
 module.exports = router

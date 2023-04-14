@@ -1,14 +1,14 @@
-const { Drug } = require('../models')
-console.log(Drug)
+const Drug = require('../models/drug')
 
 function getDrugs() {
-
+    return Drug.findAll()
 }
 
 function getDrug() {
-
+    return Drug.findOne()
 }
 
 module.exports = {
-    getAllDrugs
+    getDrugs,
+    getDrug
 }
