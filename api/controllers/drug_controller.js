@@ -1,4 +1,4 @@
-const Drug = require('../models/drug')
+const Drug = require('../models/drug_model')
 
 const getDrugs = function(req, res) {
     return Drug
