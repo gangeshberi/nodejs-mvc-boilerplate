@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const drugs = require('./routes/drug_routes')
+const drugs = require('./api/routes/drug_routes')
 
 const port = 5000
 
@@ -28,18 +28,6 @@ const third = (req, res) => {
 app
     .route('/test/:testId')
     .get([first, second, third])
-
-app.param("testId", (req, res, next, id) => {
-    if(Number.isInteger(Number(id))) {
-        next()
-    } else {
-        res.send('\
-            <body style="background-color: black"> \
-                <h1 style="color: red"> Enter a valid id!! </h1> \
-            </body> \
-        ')
-    }
-})
 
 // app.get('/test', [first, second, third])
 
