@@ -4,7 +4,7 @@ const getDrugs = function(req, res) {
 	return Drug
 		.findAll()
 		.then(drugs => res.send(drugs))
-		.catch(err => res.send(err)); // important to catch the error
+		.catch(err => res.send(err));
 };
 
 const getDrug = function(req, res) {
@@ -13,7 +13,7 @@ const getDrug = function(req, res) {
 	return Drug
 		.findOne(drugId)
 		.then(drug => res.send(drug))
-		.catch(err => res.send(err)); // important to catch the error
+		.catch(err => res.send(err));
 };
 
 module.exports = {
