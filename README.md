@@ -1,6 +1,6 @@
-# Boilerplate for Node-Express MVC with knex.js (query builder)
+# Boilerplate for Node-Express MVC with knex.js
 
-A boilerplate to create rest api with Node.js, Express and Knex.js for mysql, postgresql or others.
+A boilerplate to create rest api with Node.js, Express and Knex.js (query builder) for mysql, postgresql or others.
 
 
 ## Manual Installation
