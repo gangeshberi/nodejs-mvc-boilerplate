@@ -3,14 +3,14 @@ const knex = require('../../config/database');
 function findAll() {
   return knex
     .select()
-    .from('drugs');
+    .from('drug');
 }
 
 function findOne(drugId) {
   return knex
     .select()
-    .from('drugs')
-    .where('drug_id', drugId);
+    .from('drug')
+    .where('id', drugId);
 }
 
 module.exports = {
