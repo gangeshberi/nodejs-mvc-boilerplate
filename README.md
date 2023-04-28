@@ -58,7 +58,7 @@ api\
  |--controllers\    # Route controllers (controller layer)
  |--models\         # knex model queries (data layer)
  |--routes\         # Routes
- |--helpers\         # Helper classes and functions
+ |--helpers\        # Helper classes and functions
  |--middlewares\    # middleware functions
  |--views\          # any views available
  |-- knex.js\       # knex configuration file
