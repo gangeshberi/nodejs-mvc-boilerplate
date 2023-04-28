@@ -32,7 +32,7 @@ cp .env.example .env
 - **Query Builder**: [Knex.js](https://knexjs.org/)
 - **Migration and Seed**: DB migration and Seed using [Knex-CLI/Migration CLI](https://knexjs.org/guide/migrations.html#migration-cli) 
 - **Error handling**: centralized error handling
-- **Dependency management**: with [Yarn](https://yarnpkg.com)
+- **Dependency management**: with [NPM](https://www.npmjs.com/)
 - **Environment variables**: using [dotenv](https://github.com/motdotla/dotenv) and [cross-env](https://github.com/kentcdodds/cross-env#readme)
 - **CORS**: Cross-Origin Resource-Sharing enabled using [cors](https://github.com/expressjs/cors)
 - **Linting**: with [ESLint](https://eslint.org)
