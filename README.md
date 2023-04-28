@@ -45,6 +45,28 @@ Running locally:
 npm dev-start
 ```
 
+Running in production:
+
+```bash
+npm start
+```
+
+## Project Structure
+
+```
+api\
+ |--controllers\    # Route controllers (controller layer)
+ |--models\         # knex model queries (data layer)
+ |--routes\         # Routes
+ |--helpers\         # Helper classes and functions
+ |--middlewares\    # middleware functions
+ |--views\          # any views available
+ |-- knex.js\       # knex configuration file
+config\             # configuration related things
+db\                 # Migrations and Seed files
+app.js\             # Express app
+```
+
 ## License
 
 [MIT](LICENSE)
