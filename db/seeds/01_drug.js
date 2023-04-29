@@ -23,7 +23,7 @@ exports.seed = async function drugTable(knex) {
     console.error(`An error occurred while deleting drug table data, ${error}`);
   }
 
-  // add new enteries to the drug table
+  // Adds new enteries to the drug table
   try {
     // drug JSON data array
     const drugArray = await csv(parserParams).fromFile(drugFile);
