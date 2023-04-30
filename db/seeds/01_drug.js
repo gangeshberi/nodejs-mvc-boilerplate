@@ -1,5 +1,5 @@
 const csv = require('csvtojson');
-const path = require('node:path');
+const path = require('path');
 
 const drugFile = path.join(__dirname, '../data/drugs.csv');
 
