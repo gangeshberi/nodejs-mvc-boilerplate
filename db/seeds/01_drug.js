@@ -19,7 +19,7 @@ exports.seed = async function drugTable(knex) {
   try {
     await knex('drug')
       .del()
-      .then(() => logger.info('<--- Successfully deleted drug table --->'));
+      .then(() => logger.info('Successfully deleted drug table'));
   } catch (error) {
     logger.error(`An error occurred while deleting drug table data, ${error?.message}`);
   }
@@ -32,7 +32,7 @@ exports.seed = async function drugTable(knex) {
     // insert data into drug table
     await knex('drug')
       .insert(drugArray)
-      .then(() => logger.info('<--- Successfully inserted data into drug table --->'));
+      .then(() => logger.info('Successfully inserted data into drug table'));
   } catch (error) {
     logger.error('An error occurred while inserting data to drug table');
   }
