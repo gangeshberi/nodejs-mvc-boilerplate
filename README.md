@@ -22,8 +22,6 @@ Set the environment variables:
 
 ```bash
 cp .env.example .env
-
-# open .env and modify the environment variables (if needed)
 ```
 
 
@@ -36,6 +34,7 @@ cp .env.example .env
 - **Environment variables**: using [dotenv](https://github.com/motdotla/dotenv) and [cross-env](https://github.com/kentcdodds/cross-env#readme)
 - **CORS**: Cross-Origin Resource-Sharing enabled using [cors](https://github.com/expressjs/cors)
 - **Linting**: with [ESLint](https://eslint.org)
+- **Logger**: [Winston](https://github.com/winstonjs/winston)
 
 ## Commands
 
