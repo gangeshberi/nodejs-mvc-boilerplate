@@ -1,6 +1,6 @@
 const express = require('express');
 const { getDrugs, getDrug } = require('../controllers/drug_controller');
-const paramValidator = require('../middlewares/paramValidator');
+const paramValidator = require('../middlewares/param_validator');
 
 const router = express.Router();
 
