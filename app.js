@@ -13,5 +13,5 @@ app.get('/', (req, res) => {
 app.use('/drugs', drugs);
 
 app.listen(port, () => {
-  logger.info(`Example app listening on port ${port}`);
+  logger.info(`Application listening on port ${port}`);
 });

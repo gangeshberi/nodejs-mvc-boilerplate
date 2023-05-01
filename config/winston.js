@@ -3,7 +3,7 @@ const {
 } = require('winston');
 
 const {
-  combine, timestamp, printf,
+  combine, timestamp, printf, colorize,
 } = format;
 
 const myFormat = printf(({
@@ -23,7 +23,11 @@ const logger = createLogger({
 });
 
 if (process.env.NODE_ENV !== 'production') {
-  logger.add(new transports.Console());
+  logger.add(new transports.Console({
+    format: combine(
+      colorize({ all: true }),
+    ),
+  }));
 }
 
 module.exports = logger;

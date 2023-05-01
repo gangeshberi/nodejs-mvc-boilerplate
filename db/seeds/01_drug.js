@@ -1,5 +1,6 @@
 const csv = require('csvtojson');
 const path = require('path');
+const logger = require('../../config/winston');
 
 const drugFile = path.join(__dirname, '../data/drugs.csv');
 
@@ -18,9 +19,9 @@ exports.seed = async function drugTable(knex) {
   try {
     await knex('drug')
       .del()
-      .then(() => console.log('<--- Successfully deleted drug table --->'));
+      .then(() => logger.info('<--- Successfully deleted drug table --->'));
   } catch (error) {
-    console.error(`An error occurred while deleting drug table data, ${error}`);
+    logger.error(`An error occurred while deleting drug table data, ${error?.message}`);
   }
 
   // Adds new enteries to the drug table
@@ -31,8 +32,8 @@ exports.seed = async function drugTable(knex) {
     // insert data into drug table
     await knex('drug')
       .insert(drugArray)
-      .then(() => console.log('<--- Successfully inserted data into drug table --->'));
+      .then(() => logger.info('<--- Successfully inserted data into drug table --->'));
   } catch (error) {
-    console.error(`An error occurred while inserting data to drug table, ${error}`);
+    logger.error('An error occurred while inserting data to drug table');
   }
 };
