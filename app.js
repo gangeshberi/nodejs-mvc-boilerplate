@@ -6,10 +6,12 @@ const logger = require('./config/winston');
 
 const port = process.env.PORT || 5000;
 
+// get request on the root route (/)
 app.get('/', (req, res) => {
   res.send('<h2> nodejs-mvc-boilerplate </h2>');
 });
 
+// drug routes
 app.use('/drugs', drugs);
 
 app.listen(port, () => {

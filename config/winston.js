@@ -10,6 +10,7 @@ const myFormat = printf(({
   level, message, timestamp: timestampArg,
 }) => `${timestampArg} ${level}: ${message}`);
 
+// creates the default logger for the application
 const logger = createLogger({
   level: 'http',
   format: combine(
@@ -22,6 +23,7 @@ const logger = createLogger({
   ],
 });
 
+// console statements will be printed only in the development environment
 if (process.env.NODE_ENV === 'development') {
   logger.add(new transports.Console({
     format: combine(
