@@ -4,10 +4,10 @@ const app = express();
 const drugs = require('./api/routes/drug_routes');
 const logger = require('./config/winston');
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('<h2> nodejs-mvc-boilerplate </h2>');
 });
 
 app.use('/drugs', drugs);
