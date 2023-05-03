@@ -6,6 +6,9 @@ const logger = require('./config/winston');
 
 const port = process.env.PORT || 5000;
 
+// serve static files
+app.use('/static', express.static('public'));
+
 // get request on the root route (/)
 app.get('/', (req, res) => {
   res.send('<h2> nodejs-mvc-boilerplate </h2>');
