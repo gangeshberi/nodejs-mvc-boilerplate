@@ -11,7 +11,8 @@ const logger = require('../../config/winston');
 async function getDrugs(req, res) {
   try {
     const drugs = await Drug.findAll();
-    res.status(200).json(drugs);
+    // render the drug view
+    res.render('drug_view.ejs', { drugs });
     logger.info('Retrieved data for all drugs using getDrugs controller function');
   } catch (error) {
     logger.error(`An error occurred in getDrugs controller: ${error.message}`);
