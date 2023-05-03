@@ -65,7 +65,3 @@ config\             # configuration related things
 db\                 # Migrations and Seed files
 app.js\             # Express app
 ```
-
-## License
-
-[MIT](LICENSE)
